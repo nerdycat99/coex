@@ -10,6 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_09_02_111256) do
+
+  create_table "prices", force: :cascade do |t|
+    t.string "currency_code", limit: 5
+    t.float "last"
+    t.float "bid"
+    t.float "ask"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
