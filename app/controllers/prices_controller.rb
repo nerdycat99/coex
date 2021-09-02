@@ -9,7 +9,7 @@ class PricesController < ApplicationController
   end
 
   def index
-    @prices = Price.all
+    @prices = Price.where(currency_code: params['currency']).order('updated_at desc')
   end
 
 end
