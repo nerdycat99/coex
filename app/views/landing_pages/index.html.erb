@@ -41,4 +41,5 @@
 <% end %>
 <br />
 <br />
-<h3><%= link_to 'view all data', prices_path, class: 'btn btn-primary' %><h3>
+<h3><%= link_to 'view all data for BTC', prices_path(currency: 'BTCAUD'), class: 'btn btn-primary' %><h3>
+<h3><%= link_to 'view all data for ETH', prices_path(currency: 'ETHAUD'), class: 'btn btn-primary' %><h3>

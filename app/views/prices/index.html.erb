@@ -1,2 +1,18 @@
 <h1>prices index</h1>
-<%= @prices.inspect %>
+
+<table>
+  <th>currency</th>
+  <th>bid</th>
+  <th>ask</th>
+  <th>last</th>
+  <th>date and time</th>
+  <tr>
+    <% @prices.each do |price| %>
+      <td><%= price.currency_code %></td>
+      <td><%= price.bid %></td>
+      <td><%= price.ask %></td>
+      <td><%= price.last %></td>
+      <td><%= price.created_at %></td>
+  </tr>
+    <% end %>
+</table>

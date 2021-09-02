@@ -15,7 +15,6 @@ module CurrencyServices
       currency_collection = []
       currencies.each do | currency |
         json_response = JSON.parse(retrieve_data(currency))
-        puts json_response.inspect
         currency_data = {
           "currency_code" => "#{currency}",
           "ask" => "#{json_response.dig("ask")}",
