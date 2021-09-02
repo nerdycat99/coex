@@ -1,5 +1,44 @@
 <h1>start page</h1>
 <h1>welcome to co-ex</h1>
-<h4>click the button below to capture prices for BTC and ETH crypto currencies.</h4>
+<h3>click the button below to get the latest prices for BTC and ETH crypto currencies.</h4>
 <br>
-<div><%= link_to 'capture', prices_path, method: :post, class: 'btn btn-primary' %></div>
+<h3><%= link_to 'capture', prices_path, method: :post, class: 'btn btn-primary' %><h3>
+<br /><br />
+<% unless @btc.nil? %>
+  latest BTC data
+  <table>
+    <tr>
+      <td>ask:</td>
+      <td><%= @btc.ask %></td>
+    </tr>
+    <tr>
+      <td>bid:</td>
+      <td><%= @btc.bid %></td>
+    </tr>
+    <tr>
+      <td>last:</td>
+      <td><%= @btc.last %><br></td>
+    </tr>
+  </table>
+<% end %>
+<br /><br />
+<% unless @eth.nil? %>
+  latest BTC data
+  <table>
+    <tr>
+      <td>ask:</td>
+      <td><%= @eth.ask %></td>
+    </tr>
+    <tr>
+      <td>bid:</td>
+      <td><%= @eth.bid %></td>
+    </tr>
+    <tr>
+      <td>last:</td>
+      <td><%= @eth.last %><br></td>
+    </tr>
+  </table>
+<% end %>
+<br />
+<br />
+<h3><%= link_to 'view all data', prices_path, class: 'btn btn-primary' %><h3>
